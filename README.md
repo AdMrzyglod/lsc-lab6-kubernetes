@@ -1,0 +1,1 @@
+# lsc-lab6-kubernetes

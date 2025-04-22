@@ -57,6 +57,12 @@ helm repo update
 helm install nfs-server nfs-ganesha-server-and-external-provisioner/nfs-server-provisioner -f nfs-values-data.yaml
 ```
 
-
+Create Persistent Volume Claim, Deployment, Service and Job:
+```bash
+kubectl apply -f ./pvc-data.yaml
+kubectl apply -f ./deployment-data.yaml
+kubectl apply -f ./service-data.yaml
+kubectl apply -f ./job-data.yaml
+```
 
   

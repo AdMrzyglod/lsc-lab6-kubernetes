@@ -1,0 +1,19 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: lsc-copy-job
+spec:
+  template:
+    spec:
+      containers:
+      - name: copy-data
+        image: busybox
+        command: ["/bin/sh", "-c", "echo \"<b>DATA HTTP SERVER</b>\" > /mnt/data/index.html"]
+        volumeMounts:
+          - name: lsc-data
+            mountPath: /mnt/data
+      volumes:
+        - name: lsc-data
+          persistentVolumeClaim:
+            claimName: lsc-data-pvc
+      restartPolicy: Never

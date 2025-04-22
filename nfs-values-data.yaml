@@ -1,0 +1,4 @@
+storageClass:
+  name: nfs-storage
+  defaultClass: true
+  create: true

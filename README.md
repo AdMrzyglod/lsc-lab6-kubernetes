@@ -1,8 +1,22 @@
 # Large Scale Computing - Lab 6 – Kubernetes
 
 
-Aby zainstalować kubectl należy wykonać komendy:
-- curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
-- sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
-
-
+Commands were executed in Linux.
+You should download:
+- aws cli:
+  ```bash
+  curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+  unzip awscliv2.zip
+  sudo ./aws/install
+  ```
+- kubectl:
+  ```bash
+  curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+  sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+  ```
+- helm:
+  ```bash
+  curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
+  chmod 700 get_helm.sh
+  ./get_helm.sh
+  ```

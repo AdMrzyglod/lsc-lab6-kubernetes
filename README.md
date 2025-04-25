@@ -21,7 +21,7 @@ You should download:
   ./get_helm.sh
   ```
 
-Commands to create a cluster and create and add a node group on Amazon Elastic Kubernetes Service (EKS):
+Commands to create a cluster and create and add a node group on Amazon Elastic Kubernetes Service (EKS) (Before executing commands, you must adjust the aws parameter values):
 - ```bash
   aws eks create-cluster \
     --name lsc-lab-cluster \

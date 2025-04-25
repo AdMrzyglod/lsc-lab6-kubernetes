@@ -26,7 +26,7 @@ Commands to create a cluster and create and add a node group on Amazon Elastic K
   aws eks create-cluster \
     --name lsc-lab-cluster \
     --region us-east-1 \
-    --resources-vpc-config subnetIds=subnet-0211465f62c3523bb,subnet-02d9229142ad230e2,securityGroupIds=sg-093f2a8580b312d45 \
+    --resources-vpc-config subnetIds=subnet-05dddad28c6c27e17,subnet-0b7e0b92187e5e766,securityGroupIds=sg-074ddde8595590fbc \
     --role-arn arn:aws:iam::305245345721:role/LabRole
   ```
 - ```bash
@@ -34,7 +34,7 @@ Commands to create a cluster and create and add a node group on Amazon Elastic K
     --cluster-name lsc-lab-cluster \
     --nodegroup-name lsc-lab-nodegroup \
     --node-role arn:aws:iam::305245345721:role/LabRole \
-    --subnets "subnet-0211465f62c3523bb" "subnet-02d9229142ad230e2" \
+    --subnets "subnet-05dddad28c6c27e17" "subnet-0b7e0b92187e5e766" \
     --scaling-config minSize=1,maxSize=3,desiredSize=1 \
     --region us-east-1 \
     --instance-types 't3.medium' \
